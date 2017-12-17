@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --cache true --ext .jsx,.js ./src/**",
+    "lint:fix": "eslint --ext .jsx,.js --fix ./src/**",
+    "dev": "nodemon src/server/babel_server.js --file src/server/server.js",
+    "start": "node src/server/babel_server.js --file src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,29 @@
   "bugs": {
     "url": "https://github.com/dillonjason/socket_chat/issues"
   },
-  "homepage": "https://github.com/dillonjason/socket_chat#readme"
+  "homepage": "https://github.com/dillonjason/socket_chat#readme",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "koa": "^2.4.1",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.13.3",
+    "parcel-bundler": "^1.2.0"
+  }
 }
